@@ -49,8 +49,12 @@ export default function AgeForm({ onSubmit }: FormProps) {
             validate: {
               isValidDate(_, { day, month, year }) {
                 if (!day || !month || !year) return true;
+                const padZero = (value: number) =>
+                  value.toString().padStart(2, "0");
+
+                // pad month and day to 2 digits, to allow for 1 digit months and days
                 const date = dayjs(
-                  `${year}-${month}-${day}`,
+                  `${year}-${padZero(month)}-${padZero(day)}`,
                   "YYYY-MM-DD",
                   true
                 );
