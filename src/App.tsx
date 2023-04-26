@@ -32,7 +32,7 @@ function App() {
 
   return (
     <main className="min-h-screen bg-offWhite p-4 desktop:grid desktop:place-items-center">
-      <div className="bg-white mt-20 rounded-3xl rounded-br-[12rem] px-8 py-14 desktop:px-10 max-w-2xl mx-auto desktop:mt-0">
+      <div className="bg-white mt-20 rounded-3xl rounded-br-[7rem] px-8 py-14 w-full max-w-2xl mx-auto desktop:px-10 desktop:mt-0 desktop:rounded-br-[12rem]">
         <AgeForm onSubmit={handleSubmit} />
         <Result {...age} />
       </div>
